@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+      <TargetFrameworks>net472;net48;net5.0-windows</TargetFrameworks>
+    <ProjectGuid>{D227C890-9568-43B9-BC64-AE3971742B58}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CustomControls.Winforms</RootNamespace>
+    <AssemblyName>CustomControls.Winforms</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+      <UseWindowsForms>true</UseWindowsForms>
+      <Platforms>AnyCPU;x86;x64</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\$(TargetFramework)\CustomControls.Winforms.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\$(TargetFramework)\CustomControls.Winforms.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RFBCodeWorks\ExtensionMethods\System.Extensions\System.Extensions.csproj" />
+    <ProjectReference Include="..\CustomControls_Interfaces\CustomControls_Interfaces.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+</Project>
